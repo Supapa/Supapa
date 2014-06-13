@@ -1,0 +1,91 @@
+#include "supapa.h"
+
+void Supapa::C_1()
+{
+
+    int i;
+
+    //-=
+
+    for(i=0;i<=Go_i;i++){
+
+        if(Go[i*Go_2+1]==1){
+
+            //-=-=-=;
+
+            //
+
+
+        }
+
+    }
+
+
+
+    //-=
+
+
+    return ;
+}
+
+void Supapa::cc_2()
+{
+
+
+
+    //
+}
+
+void Supapa::cc_3()
+{
+
+
+    //
+}
+
+void Supapa::buildNeedsListByXandY(int x, int y,int banjing)
+{
+
+    int i;
+    int x2,y2;
+
+    for(i=0;i<=Go_i;i++){
+
+        if(Go[i*Go_2+0]==1 && Go[i*Go_2+1]==3){
+
+            x2=getGoPrtValue(i,1); //获取1类型属性
+            y2=getGoPrtValue(i,2); //获取2类型属性
+
+            if(x2>x-banjing && x2<x+banjing ){
+                if(y2>y-banjing && y2<y+banjing ){
+                    addToNeedsList(i);
+                }
+            }
+        }
+    }
+
+
+}
+
+bool Supapa::check1and2(int x, int y, int banjing, int Go_id)
+{
+     int x2,y2;
+     x2=getGoPrtValue(Go_id,1); //获取1类型属性
+     y2=getGoPrtValue(Go_id,2); //获取2类型属性
+
+
+     if(x2>x-banjing && x2<x+banjing ){
+         if(y2>y-banjing && y2<y+banjing ){
+             return true;
+         }
+     }
+
+     return false;
+}
+
+
+
+
+
+
+
